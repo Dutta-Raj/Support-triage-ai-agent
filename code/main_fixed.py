@@ -1,6 +1,5 @@
 import pandas as pd 
 import sys 
-from pathlib import Path 
 from tqdm import tqdm 
  
 sys.path.insert(0, r'C:\Users\KIIT\Desktop\hackerrank-orchestrate-may26\code') 
@@ -19,6 +18,7 @@ retriever = SupportRetriever()
 decider = EscalationDecider() 
 responder = ResponseGenerator(retriever) 
  
+# Fix: use the correct path - support_tickets folder 
 df = pd.read_csv('../support_tickets/support_tickets.csv') 
 print(f'Processing {len(df)} tickets...') 
  
